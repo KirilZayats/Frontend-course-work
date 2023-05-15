@@ -1,0 +1,29 @@
+@mixin header-font-style-md {
+  color: white;
+  font-family: "hk-guise-light", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 31px;
+}
+
+@mixin header-font-style-lg {
+  color: white;
+  font-family: "hk-guise-semi-bold", sans-serif;
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 87px;
+  letter-spacing: -5.30968px;
+}
+
+@mixin header-style-list {
+  display: flex;
+  li a {
+    text-decoration: none;
+    @include header-font-style-md();
+    margin-left: 1.6em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  list-style-type: none;
+}

@@ -1,0 +1,14 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "buttons/buttons";
+@import "header";
+@import "banner";
+
+body {
+  margin: 0;
+}
+
+.site-main {
+  background-color: black;
+}
