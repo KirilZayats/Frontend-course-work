@@ -1,18 +1,25 @@
 @mixin header-font-style-md {
   color: white;
   font-family: "hk-guise-light", sans-serif;
-  font-size: 21px;
-  font-weight: 400;
+  font-size: calc(15px + 0.258vw);
+  font-weight: 600;
   line-height: 31px;
+  letter-spacing: 0px;
 }
 
 @mixin header-font-style-lg {
   color: white;
   font-family: "hk-guise-semi-bold", sans-serif;
-  font-size: 100px;
+  font-size: 117px;
   font-weight: 500;
   line-height: 87px;
   letter-spacing: -5.30968px;
+}
+@mixin nav-el-font-sm {
+  color: white;
+  font-family: "hk-guise-semi-bold", sans-serif;
+  font-size: 14.4px;
+  font-weight: 500;
 }
 
 @mixin header-style-list {

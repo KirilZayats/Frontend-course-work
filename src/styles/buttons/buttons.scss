@@ -30,3 +30,25 @@
     color: black;
   }
 }
+
+.btn-cstm-hlp {
+  position: fixed;
+  z-index: 9999;
+  bottom: 15px;
+  right: 20px;
+  border: none;
+  border-radius: 50;
+  padding: 0.8em 1.6em;
+  font-size: 15px;
+  color: black;
+  display: flex;
+  height: 45px;
+  align-items: center;
+  background-color: rgb(221, 119, 221);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  img {
+    color: black;
+    padding-right: 9px;
+  }
+}

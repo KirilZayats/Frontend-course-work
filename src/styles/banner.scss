@@ -3,7 +3,7 @@
 }
 
 .banner-title {
-  padding: 86px 0 30px 0;
+  padding: 110px 0 30px 0;
   width: $content-bx-xl;
   margin: 0 auto;
   height: 280px;
@@ -35,8 +35,11 @@
   .banner-title__ps-fl,
   .banner-title__ps-sl {
     display: inline-flex;
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
     margin-left: 40px;
-    transform: translateX(115%);
+    transform: translateX(129%);
     @include header-font-style-md();
     font-size: 15px;
     color: grey;
@@ -71,6 +74,7 @@
   @include header-font-style-md();
   font-size: 25px;
   color: black;
+  margin-top: 30px;
   margin: 0 auto;
   position: relative;
   &:hover {
@@ -86,6 +90,63 @@
   }
 }
 
+.banner-video-wrapper {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  position: absolute;
+  top: 450px;
+}
+
+.banner-video {
+  animation: lptp-rotate ease 6s infinite alternate;
+}
+
+.banner-nav-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: -720px;
+}
+
+.banner-title-md {
+  width: $content-bx-xl;
+  @include header-font-style-lg();
+  text-align: center;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  width: $content-bx-xl;
+  gap: 100px;
+}
+
+.nav-elem {
+  text-decoration: none;
+  @include nav-el-font-sm();
+  display: flex;
+  height: 25px;
+  &:hover {
+    color: rgb(100, 100, 100);
+  }
+}
+
+.nav-title {
+  @include nav-el-font-sm();
+  width: 114px;
+  color: gray;
+}
+
+.category-nav-grid {
+  display: grid;
+  grid-template-columns: 135px 145px 150px 177px 110px 155px 120px 227px;
+}
+
 @keyframes lght-btn-inner {
   0% {
     box-shadow: none;
@@ -97,16 +158,6 @@
     box-shadow: 0px 0px 23px 4px rgba(30, 49, 64, 0.38) inset;
   }
 }
-.banner-video-wrapper {
-  width: $content-bx-xl;
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  position: absolute;
-  top: 423px
-
-}
-
 
 @keyframes lght-btn-outter {
   0% {
@@ -117,5 +168,19 @@
   }
   100% {
     box-shadow: 0px 0px 23px 14px rgba(30, 49, 64, 0.38);
+  }
+}
+
+@keyframes lptp-rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(-25deg);
+  }
+
+  100% {
+    transform: rotateY(25deg);
   }
 }
