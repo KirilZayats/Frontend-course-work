@@ -10,11 +10,12 @@
 @mixin header-font-style-lg {
   color: white;
   font-family: "hk-guise-semi-bold", sans-serif;
-  font-size: 117px;
+  font-size: 114px;
   font-weight: 500;
   line-height: 87px;
-  letter-spacing: -5.30968px;
+  letter-spacing: -5.31px;
 }
+
 @mixin nav-el-font-sm {
   color: white;
   font-family: "hk-guise-semi-bold", sans-serif;

@@ -1,0 +1,65 @@
+.niches-flex {
+  display: flex;
+  width: $content-bx-xl;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.niches-flex__header {
+  width: 100%;
+  display: flex;
+  @include header-font-style-lg();
+  font-size: 271px;
+  letter-spacing: -30.31px;
+  padding-top: 100px;
+  margin-bottom: 40px;
+}
+
+.niches-content {
+  display: flex;
+}
+
+.niches-list {
+  @include header-font-style-md();
+  font-size: 50px;
+  letter-spacing: -2px;
+  color: gray;
+  padding-left: 0;
+  &:hover {
+    color: white;
+  }
+  list-style-type: none;
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    height: 45px;
+    button {
+      display: none;
+    }
+    &:hover {
+      button {
+        display: block;
+      }
+    }
+  }
+}
+
+.btn-cstm-niches {
+  width: 111px;
+  height: 40px;
+  font-size: 15px;
+  letter-spacing: -1;
+  padding: 0;
+}
+
+.niches-list-container__ps {
+    @include header-font-style-md();
+    color: gray;
+    font-size: 25px;
+}
+
+.niches-list-container__img {
+    width: 1002px;
+    height: 678px;
+}

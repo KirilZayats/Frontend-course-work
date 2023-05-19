@@ -1,67 +1,92 @@
 .site-banner {
   padding-top: 67px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &::after {
+    position: absolute;
+    display: flex;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    align-items: end;
+    z-index: -1;
+    content: url("https://themeskingdom.com/wp-content/themes/2023/assets/img/home/comp-1.mov");
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    height: 100%;
+    animation: lptp-rotate ease 6s infinite alternate;
+  }
 }
 
 .banner-title {
   padding: 110px 0 30px 0;
   width: $content-bx-xl;
   margin: 0 auto;
+  margin-bottom: 30px;
   height: 280px;
   z-index: 1;
-  .banner-title__fl,
-  .banner-title__sl {
+}
+
+.banner-title__fl,
+.banner-title__sl {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  user-select: none;
+  @include header-font-style-lg();
+  sup {
+    @include header-font-style-md();
+    display: inline-flex;
+    width: 26px;
+    height: 26px;
+    border: $btn-border gray;
+    color: gray;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover sup {
+    color: white;
+    border: $btn-border white;
+  }
+}
+
+.banner-title__ps-fl,
+.banner-title__ps-sl {
+  display: inline-flex;
+  position: relative;
+  margin-top: 40px;
+  width: 49%;
+  box-sizing: border-box;
+  padding-inline: 20px;
+  @include header-font-style-md();
+  font-size: 15px;
+  color: grey;
+  align-items: center;
+  span {
     display: flex;
     justify-content: center;
-    align-items: start;
-    user-select: none;
-    @include header-font-style-lg();
-    sup {
-      @include header-font-style-md();
-      display: inline-flex;
-      width: 26px;
-      height: 26px;
-      border: $btn-border gray;
-      color: gray;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-    }
-    &:hover sup {
-      color: white;
-      border: $btn-border white;
-    }
-  }
-
-  .banner-title__ps-fl,
-  .banner-title__ps-sl {
-    display: inline-flex;
-    position: relative;
-    z-index: 1;
-    margin-top: 40px;
-    margin-left: 40px;
-    transform: translateX(129%);
-    @include header-font-style-md();
-    font-size: 15px;
-    color: grey;
     align-items: center;
-    span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 20px;
-      height: 20px;
-      border: $btn-border gray;
-      border-radius: 50%;
-      margin-right: 5px;
-    }
+    width: 20px;
+    height: 20px;
+    border: $btn-border gray;
+    border-radius: 50%;
+    margin-right: 5px;
   }
-  .banner-title__fl:hover ~ .banner-title__ps-fl,
-  .banner-title__sl:hover ~ .banner-title__ps-sl {
-    color: white;
-    span {
-      border: $btn-border white;
-    }
+}
+
+.banner-title__fl:hover ~ .banner-title__ps-fl,
+.banner-title__sl:hover ~ .banner-title__ps-sl {
+  color: white;
+  span {
+    border: $btn-border white;
   }
+}
+
+.banner-title__ps-fl {
+  justify-content: end;
 }
 
 .site-banner__btn-cstm {
@@ -90,27 +115,12 @@
   }
 }
 
-.banner-video-wrapper {
-  width: 100%;
-  background-color: black;
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  position: absolute;
-  top: 450px;
-}
-
-.banner-video {
-  animation: lptp-rotate ease 6s infinite alternate;
-}
-
 .banner-nav-wrapper {
   width: 100%;
+  margin-top: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  bottom: -720px;
 }
 
 .banner-title-md {
